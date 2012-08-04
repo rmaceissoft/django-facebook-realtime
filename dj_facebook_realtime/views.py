@@ -4,7 +4,6 @@ from django.utils import simplejson
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 
-from dj_facebook_realtime.utils import FacebookImporter
 from dj_facebook_realtime.signals import realtime_update
 
 logger = logging.getLogger(__name__)
