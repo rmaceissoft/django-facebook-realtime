@@ -13,7 +13,7 @@ setup(
     author = 'Reiner Marquez',
     author_email = 'rmaceissoft@gmail.com',
     packages = find_packages(exclude=['tests', 'example', 'docs']),
-    install_requires = ['request', 'django'],
+    install_requires = ['requests', 'django'],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Framework :: Django',
