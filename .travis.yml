@@ -5,6 +5,8 @@ python:
 env:
   - DJANGO_VERSION=1.4
 install:
+  # This is a dependency of our Django test script
+  - pip install argparse --use-mirrors
   # install django version
   - pip install -q Django==$DJANGO_VERSION --use-mirrors
   - python setup.py install
