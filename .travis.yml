@@ -1,0 +1,12 @@
+language: python
+python:
+  - "2.7"
+  - "2.6"
+env:
+  - DJANGO_VERSION=1.4
+install:
+  # install django version
+  - pip install -q Django==$DJANGO_VERSION --use-mirrors
+  - python setup.py install
+script:
+  - python quicktest.py dj_facebook_realtime
