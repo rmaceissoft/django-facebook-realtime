@@ -1,5 +1,7 @@
 import requests
 import urlparse
+import string
+import random
 
 from django.conf import settings
 from django.core.urlresolvers import reverse
@@ -18,7 +20,10 @@ def get_app_access_token():
     response = requests.get(url)
     return urlparse.parse_qs(response.content)['access_token'][0]
 
-
+def string_generator(size=6):
+    """ generate a random string of size length
+    """
+    return ''.join(random.choice(string.ascii_letters) for x in xrange(size))
 
 class FacebookSubscription(object):
 
