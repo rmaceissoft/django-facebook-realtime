@@ -1,6 +1,6 @@
-================================
-Django-facebook-realtimes-update
-================================
+========================
+django-facebook-realtime
+========================
 
 .. image:: https://secure.travis-ci.org/rmaceissoft/django-facebook-realtime.png?branch=master
    :target: http://travis-ci.org/rmaceissoft/django-facebook-realtime
