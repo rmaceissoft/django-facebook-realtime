@@ -54,3 +54,24 @@ removing all existent subscriptions only for users
 Listing all subscriptions
 -------------------------
 ``python manage.py realtime_subscriptions_list``
+
+Retrieving updates with facebook data changes
+---------------------------------------------
+Below a snippet of code to handling realtime_update signal provided by django-facebook-realtime to keep posted of facebook changes through facebook realtime service::
+
+    from django.dispatch import receiver
+    from dj_facebook_realtime.signals import realtime_update
+
+
+    @receiver(realtime_update)
+    def handler_new_facebook_change(sender, object_type, uid, changed_fields, time, **kwargs):
+        """
+        handler facebook changes detected through facebook's real-time update service
+        by each changed entry related with an user of daycliq,
+        check if some his connections changed and then run facebook importer
+        """
+        if object_type == 'user':
+            # make some action for changes related to facebook users
+        elif object_type == 'page':
+            # make some action for changes related to facebook users
+
