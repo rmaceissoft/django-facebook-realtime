@@ -28,12 +28,29 @@ Installation
 
 2. Add ``"dj_facebook_realtime"`` to your ``INSTALLED_APPS`` setting
 
-3. Add ``FACEBOOK_REALTIME_VERIFY_TOKEN`` setting
+3. Add ``FACEBOOK_APP_ID``, ``FACEBOOK_API_SECRET`` and ``FACEBOOK_REALTIME_VERIFY_TOKEN`` settings
 
 4. Wire up the views by adding a line to your URLconf::
 
     url(r'facebook/subscriptions/', include('dj_facebook_realtime.urls')),
 
+5. Make sure that current Site has a right domain value due to it's used to build callback url used to verify subscriptions
+
 Example of use
 ==============
- coming soon
+
+Adding a subscription
+---------------------
+adding a subscription for changes on user's friends and feed connections
+
+``python manage.py realtime_subscriptions_add --object_type=user --fields=friends,feed``
+
+Removing subscriptions
+----------------------
+removing all existent subscriptions only for users
+
+``python manage.py realtime_subscriptions_delete --object_type=user``
+
+Listing all subscriptions
+-------------------------
+``python manage.py realtime_subscriptions_list``
