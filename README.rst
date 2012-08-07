@@ -2,6 +2,9 @@
 Django-facebook-realtimes-update
 ================================
 
+.. image:: https://secure.travis-ci.org/rmaceissoft/django-facebook-realtime.png?branch=master
+   :target: http://travis-ci.org/rmaceissoft/django-facebook-realtime
+
 A reusable app to interact with facebook real-time updates (https://developers.facebook.com/docs/reference/api/realtime/)
 
 
