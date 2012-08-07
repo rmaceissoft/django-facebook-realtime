@@ -66,12 +66,10 @@ Below a snippet of code to handling realtime_update signal provided by django-fa
     @receiver(realtime_update)
     def handler_new_facebook_change(sender, object_type, uid, changed_fields, time, **kwargs):
         """
-        handler facebook changes detected through facebook's real-time update service
-        by each changed entry related with an user of daycliq,
-        check if some his connections changed and then run facebook importer
+        handle facebook changes detected through facebook's real-time update service
         """
         if object_type == 'user':
             # make some action for changes related to facebook users
         elif object_type == 'page':
-            # make some action for changes related to facebook users
+            # make some action for changes related to facebook pages
 
