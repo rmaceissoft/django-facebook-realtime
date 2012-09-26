@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name = "django-facebook-realtime",
-    version = "0.1.0",
+    version = "0.1.1",
     description = "django app for adding/removing/listing facebook realtime subscriptions and retrieving facebook realtime updates",
     long_description = read('README.rst'),
     url = 'https://github.com/rmaceissoft/django-facebook-realtime',
